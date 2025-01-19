@@ -30,4 +30,4 @@ flex-start, flex-end)
 показанные вам направления (flex-start, flex-end, center, stretch)
 5. Повторите следующие примеры
 
-[example](materials/adaptive-layout_task2.png)
+![alt text](materials/adaptive-layout_task2.png "Макет с адаптивной версткой")
