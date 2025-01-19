@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания по адаптивной верстке</title>
+    <style>
+        .parent {
+            display: flex;
+            border: 3px solid red;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .child {
+            border: 2px solid green;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .align-flex-start { align-items: flex-start; }
+        .align-flex-end { align-items: flex-end; }
+        .align-center { align-items: center; }
+        .align-stretch { align-items: stretch; }
+    </style>
+</head>
+<body>
+    <div class="parent align-flex-start">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+
+    <div class="parent align-flex-end">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+
+    <div class="parent align-center">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+
+    <div class="parent align-stretch">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+</body>
+</html>
+
