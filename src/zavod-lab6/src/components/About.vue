@@ -45,7 +45,6 @@
         </div>
       </div>
 
-      <!-- Images Row -->
       <div class="flex gap-6 mt-8">
         <img
             src="/aurelien-romain-DB_q6rPFnBM-unsplash%201.jpg"
