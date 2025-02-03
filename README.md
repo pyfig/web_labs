@@ -157,3 +157,4 @@ flex-start, flex-end)
    запрещен.
 
 ~~**DONE: 24.01 todo: make for every lab - in directory single readme for only this task**~~
+**3.02 todo: refactor code in OnlineShop-Lab5**
