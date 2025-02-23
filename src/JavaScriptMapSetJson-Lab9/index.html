@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическое задание</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .task {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .task h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        input, button {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px;
+            margin: 3px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #e0e0ff;
+        }
+
+        .json-output {
+            background-color: #f8f8f8;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Задание 1 -->
+    <div class="task">
+        <h3>Задание 1</h3>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </div>
+
+    <!-- Задание 2 -->
+    <div class="task">
+        <h3>Задание 2</h3>
+        <p>Кликайте по абзацам:</p>
+        <p>Абзац 1</p>
+        <p>Абзац 2</p>
+        <p>Абзац 3</p>
+        <button id="addExclamation">Добавить восклицательные знаки</button>
+    </div>
+
+    <!-- Задание 3 -->
+    <div class="task">
+        <h3>Задание 3</h3>
+        <div id="userList"></div>
+    </div>
+
+    <!-- Задание 4 -->
+    <div class="task">
+        <h3>Задание 4</h3>
+        <button id="changeUser">Изменить второго пользователя</button>
+        <div id="modifiedUsers" class="json-output"></div>
+    </div>
+
+    <!-- Задание 5 -->
+    <div class="task">
+        <h3>Задание 5</h3>
+        <ul id="cityList">
+            <li>city1</li>
+            <li>city2</li>
+            <li>city3</li>
+            <li>city4</li>
+        </ul>
+        <button id="showCities">Показать города в JSON</button>
+        <div id="citiesJson" class="json-output"></div>
+    </div>
+
+    <script>
+        // Задание 1
+        const inputs = document.querySelectorAll('.task:nth-of-type(1) input');
+        const inputMap = new Map();
+
+        inputs.forEach((input, index) => {
+            inputMap.set(input, index + 1);
+            input.addEventListener('click', function() {
+                this.value = inputMap.get(this);
+            });
+        });
+
+        // Задание 2
+        const paragraphs = document.querySelectorAll('.task:nth-of-type(2) p');
+        const clickedParagraphs = new Set();
+        
+        paragraphs.forEach(p => {
+            p.addEventListener('click', function() {
+                this.classList.toggle('active');
+                clickedParagraphs.add(this);
+            });
+        });
+
+        document.getElementById('addExclamation').addEventListener('click', () => {
+            clickedParagraphs.forEach(p => {
+                p.textContent += '!';
+                p.classList.remove('active');
+            });
+            clickedParagraphs.clear();
+        });
+
+        // Задание 3
+        const jsonUsers = '["user1","user2","user3","user4","user5"]';
+        const userList = document.getElementById('userList');
+        const users = JSON.parse(jsonUsers);
+        
+        const ul = document.createElement('ul');
+        users.forEach(user => {
+            const li = document.createElement('li');
+            li.textContent = user;
+            ul.appendChild(li);
+        });
+        userList.appendChild(ul);
+
+        // Задание 4
+        document.getElementById('changeUser').addEventListener('click', () => {
+            const modifiedUsers = JSON.parse(jsonUsers);
+            modifiedUsers[1] = 'modifiedUser';
+            document.getElementById('modifiedUsers').textContent = 
+                JSON.stringify(modifiedUsers, null, 2);
+        });
+
+        // Задание 5
+        document.getElementById('showCities').addEventListener('click', () => {
+            const cities = Array.from(document.querySelectorAll('#cityList li'))
+                .map(li => li.textContent);
+            document.getElementById('citiesJson').textContent = 
+                JSON.stringify(cities, null, 2);
+        });
+    </script>
+</body>
+</html>
