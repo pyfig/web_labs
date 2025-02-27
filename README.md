@@ -196,3 +196,40 @@ flex-start, flex-end)
 <li>city4</li>
 </ul>
 Получите список городов в формате JSON.
+
+# Основы ООП
+Задание:
+1. Изучить материал по теме “Основы ООП в JavaScript”
+2. Ответить на вопросы по теме
+3. Создать классы в JavaScript
+Материал, вопросы и задания по созданию классов ниже в этом же файле.
+Изучите теорию по ссылкам
+1. https://code.mu/ru/javascript/book/oop/intro/
+2. https://code.mu/ru/javascript/book/oop/classes-objects/
+3. https://code.mu/ru/javascript/book/oop/objects-properties/
+4. https://code.mu/ru/javascript/book/oop/many-objects/
+5. https://code.mu/ru/javascript/book/oop/class-methods/
+6. https://code.mu/ru/javascript/book/oop/methods-parameters/
+7. https://code.mu/ru/javascript/book/oop/properties-inside-class/
+8. https://code.mu/ru/javascript/book/oop/methods-inside-class/
+9. https://code.mu/ru/javascript/book/oop/properties-declaration/
+10. https://code.mu/ru/javascript/book/oop/class-constructor/
+11. https://code.mu/ru/javascript/book/oop/constructor-parameters/
+12. https://code.mu/ru/javascript/book/oop/constructor-parameters-properties/
+Ответьте на вопросы
+1. Как создать класс?
+2. Как создать объект класса?
+3. Что такое свойства объекта и как записать данные в свойства объекта?
+4. Как создать метод класса?
+5. Что такое конструктор и как создать его?
+Выполните задания
+1. Создайте класс Person, описывающий какого-либо человека, со свойствами
+name, age и country. Свойства необходимо записать через параметры
+конструктора класса. Также создайте метод, который будет выводить в консоль
+информацию о человеке. Создайте два объекта класса Person, установите для
+каждого из них значения свойств, и выведите их в консоль.
+2. Создайте класс Rectangle, описывающий прямоугольник, со свойствами width и
+height. Свойства необходимо записать через параметры конструктора класса.
+Также создайте методы, которые будет высчитывать площадь и периметр
+прямоугольника. Создайте объект класса Rectangle и высчитайте его площадь и
+периметр.
